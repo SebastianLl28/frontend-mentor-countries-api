@@ -1,9 +1,29 @@
+import { useContext, useState, useEffect } from "react";
 import CardCountry from "./CardCountry";
-import { useContext } from "react";
 import { UseCountryContext } from "../../../context/useContries";
+import { FilterContext } from "../../../context/UseFilter";
 
 const Body = () => {
   const { countries, loading, error } = useContext(UseCountryContext);
+
+  const { filter } = useContext(FilterContext);
+
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    setList(countries);
+  }, [countries]);
+
+  useEffect(() => {
+    if (filter.search === "") {
+      setList(countries);
+    } else {
+      const filterList = countries.filter((country) =>
+        country.name.toLowerCase().includes(filter.search.toLowerCase())
+      );
+      setList(filterList);
+    }
+  }, [filter]);
 
   return (
     <section className="container mx-auto px-2">
@@ -13,7 +33,7 @@ const Body = () => {
 
       {!loading && !error && (
         <div className="grid grid-cols-4 gap-16">
-          {countries.map((item, index) => (
+          {list.map((item, index) => (
             <CardCountry country={item} key={index} />
           ))}
         </div>
