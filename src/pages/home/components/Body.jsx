@@ -15,14 +15,21 @@ const Body = () => {
   }, [countries]);
 
   useEffect(() => {
-    if (filter.search === "") {
+    // filter countries by search and region
+    if (filter.search === "" && filter.region === "") {
       setList(countries);
-    } else {
-      const filterList = countries.filter((country) =>
-        country.name.toLowerCase().includes(filter.search.toLowerCase())
-      );
-      setList(filterList);
+      return;
     }
+    const filteredCountries = countries
+      .filter(
+        (country) =>
+          filter.search === "" ||
+          country.name.toLowerCase().includes(filter.search.toLowerCase())
+      )
+      .filter(
+        (country) => filter.region === "" || country.region === filter.region
+      );
+    setList(filteredCountries);
   }, [filter]);
 
   return (

@@ -1,22 +1,37 @@
+import { useContext } from "react";
+import { useState } from "react";
+import { FilterContext } from "../../../context/UseFilter";
+import { useEffect } from "react";
+
 const Select = () => {
+  const { changeRegion } = useContext(FilterContext);
+
+  const [selected, setSelected] = useState("");
+
+  useEffect(() => {
+    changeRegion(selected);
+  }, [selected]);
+
   return (
-    <select className="w-60 rounded px-4 h-12 outline-none  bg-slate-700 text-white">
-      <option value="" disabled hidden>
-        Filter by Region
-      </option>
-      <option value="1" className="">
+    <select
+      className="w-60 rounded px-4 h-12 outline-none  bg-slate-700 text-white"
+      value={selected}
+      onChange={(e) => setSelected(e.target.value)}
+    >
+      <option value="">All Region</option>
+      <option value="Africa" className="">
         Africa
       </option>
-      <option value="2" className="">
+      <option value="Americas" className="">
         America
       </option>
-      <option value="3" className="">
+      <option value="Asia" className="">
         Asia
       </option>
-      <option value="4" className="">
+      <option value="Europe" className="">
         Europe
       </option>
-      <option value="5" className="">
+      <option value="Oceania" className="">
         Oceania
       </option>
     </select>
