@@ -22,7 +22,7 @@ const ElementListCountry = ({ country }) => {
 
   return (
     <li
-      className="text-white px-6 py-1 shadow-lg bg-slate-700 rounded-sm cursor-pointer"
+      className="dark:text-white text-slate-800 px-6 py-1 shadow-lg bg-white dark:bg-slate-700 rounded-sm cursor-pointer"
       onClick={handleClick}
     >
       {name}

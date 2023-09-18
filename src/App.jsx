@@ -6,7 +6,7 @@ import UseFilter from "./context/UseFilter";
 
 const App = () => {
   return (
-    <main className="min-h-screen bg-slate-800">
+    <main className="min-h-screen dark:bg-slate-800 bg-slate-50">
       <UseContries>
         <UseFilter>
           <BrowserRouter>

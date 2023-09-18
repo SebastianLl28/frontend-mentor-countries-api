@@ -17,7 +17,7 @@ const CardCountry = ({
 
   return (
     <div
-      className="bg-slate-700 rounded overflow-hidden text-white h-full shadow-lg transition-transform hover:scale-105 cursor-pointer"
+      className="dark:bg-slate-700 rounded overflow-hidden text-slate-800 dark:text-white h-full shadow-lg transition-transform hover:scale-105 cursor-pointer bg-white"
       onClick={handleClick}
     >
       <img src={`${png}`} alt="" className="w-full object-cover h-40" />

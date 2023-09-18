@@ -6,7 +6,7 @@ const Button = () => {
 
   return (
     <button
-      className="flex items-center gap-3 px-5 py-2 bg-slate-700 shadow-lg text-white"
+      className="flex items-center gap-3 px-5 py-2 bg-white dark:bg-slate-700 shadow-lg dark:text-white text-slate-800"
       onClick={() => navigate("/")}
     >
       <svg

@@ -19,9 +19,13 @@ const Country = ({
 }) => {
   // console.log(languages)
   return (
-    <section className="text-white grid grid-cols-2 gap-x-36">
+    <section className="dark:text-white text-slate-700 grid grid-cols-2 gap-x-36">
       <picture>
-        <img src={flag} alt={`flag to ${name}`} />
+        <img
+          src={flag}
+          alt={`flag to ${name}`}
+          className="w-full min-h-full object-cover"
+        />
       </picture>
       <div className="[&>ul>li>span]:font-semibold space-y-8">
         <p className="text-2xl font-bold my-8">{name}</p>

@@ -14,7 +14,7 @@ const Select = () => {
 
   return (
     <select
-      className="w-60 rounded px-4 h-12 outline-none  bg-slate-700 text-white"
+      className="shadow-lg w-60 rounded px-4 h-12 outline-none bg-white  dark:bg-slate-700 dark:text-white text-slate-800"
       value={selected}
       onChange={(e) => setSelected(e.target.value)}
     >
