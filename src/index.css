@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-helper {
+  grid-template-columns: auto 1fr;
+}
