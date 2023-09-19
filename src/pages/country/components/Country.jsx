@@ -19,17 +19,17 @@ const Country = ({
 }) => {
   // console.log(languages)
   return (
-    <section className="dark:text-white text-slate-700 grid grid-cols-2 gap-x-36">
+    <section className="dark:text-white text-slate-700 xl:grid grid-cols-2 gap-x-10 xl:gap-x-36">
       <picture>
         <img
           src={flag}
           alt={`flag to ${name}`}
-          className="w-full min-h-full object-cover"
+          className="w-full min-h-full object-cover max-h-72 md:max-h-96 xl:max-h-[28rem]"
         />
       </picture>
       <div className="[&>ul>li>span]:font-semibold space-y-8">
         <p className="text-2xl font-bold my-8">{name}</p>
-        <ul className="grid grid-rows-5 grid-flow-col gap-y-2">
+        <ul className="grid md:grid-rows-5 md:grid-flow-col gap-y-2">
           <li>
             <span>Native Name: </span> {nativeName}
           </li>
@@ -45,7 +45,7 @@ const Country = ({
           <li>
             <span>Capital: </span> {capital}
           </li>
-          <li>
+          <li className="mt-8 md:mt-0">
             <span>Top Level Domain: </span> {topLevelDomain}
           </li>
           <li>

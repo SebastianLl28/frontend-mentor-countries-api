@@ -33,13 +33,13 @@ const Body = () => {
   }, [filter]);
 
   return (
-    <section className="container mx-auto px-2">
+    <section className="container mx-auto px-5">
       {loading && <p>Loading...</p>}
 
       {!loading && error && <p>Error</p>}
 
       {!loading && !error && (
-        <div className="grid grid-cols-4 gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-16">
           {list.map((item, index) => (
             <CardCountry country={item} key={index} />
           ))}

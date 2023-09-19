@@ -3,7 +3,7 @@ import Select from "./Select";
 
 const Header = () => {
   return (
-    <div className="py-14 flex justify-between">
+    <div className="py-14 flex flex-wrap gap-5 justify-between px-5">
       <Search />
       <Select />
     </div>
