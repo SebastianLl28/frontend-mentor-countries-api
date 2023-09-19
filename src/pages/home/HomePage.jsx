@@ -3,7 +3,7 @@ import Header from "./components/Header";
 
 const HomePage = () => {
   return (
-    <div className="container mx-auto px-5">
+    <div className="container mx-auto px-8">
       <Header />
       <Body />
     </div>

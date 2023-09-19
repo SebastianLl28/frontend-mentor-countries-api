@@ -33,7 +33,7 @@ const Body = () => {
   }, [filter]);
 
   return (
-    <section className="container mx-auto px-5">
+    <section className="container mx-auto">
       {loading && <p>Loading...</p>}
 
       {!loading && error && <p>Error</p>}
