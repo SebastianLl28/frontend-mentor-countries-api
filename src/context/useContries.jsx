@@ -11,7 +11,7 @@ const UseContries = ({ children }) => {
     async function fetchData() {
       try {
         setLoading(true);
-        const response = await fetch("src/data/data.json");
+        const response = await fetch("/data.json");
         const jsonData = await response.json();
         setCountries(jsonData);
         setLoading(false);
